@@ -1,0 +1,139 @@
+main {
+    background-color: #242124;
+    height: auto;
+    padding: 0px 100px;
+}
+
+.head .title {
+    padding-top: 100px;
+    color: white;
+    text-align: center;
+}
+
+.head .title h2 {
+    font-size: 38px;
+}
+
+.head .title i {
+    margin-top: 20px;
+    font-size: 45px;
+}
+
+.new .title {
+    color: white;
+    margin: 100px 0px 50px 0px;
+}
+
+.new .title h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #FF0E1F;
+
+}
+
+.new .title span {
+    font-family: sans-serif;
+}
+
+.new .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.new .list .card {
+    width: 280px;
+    height: 358px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.new .list .card .img {
+    width: 100%;
+    overflow: hidden;
+    height: 308px;
+    /* border: 1px solid white; */
+}
+
+.new .list .card .img img {
+    width: 113%;
+    transition: 0.2s;
+    margin-left: -6%;
+}
+
+.new .list .card .img:hover img {
+    width: 110%;
+}
+
+.new .list .card .text .name_price {
+    background-color: #061C25;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.new .list .card .text .name_price span {
+    line-height: 50px;
+    margin: 0px 20px;
+}
+
+.new .list .card .text .name_price #price {
+    color: #FF0E1F;
+    font-family: sans-serif;
+}
+
+.new .list .card .text {
+    position: relative;
+    width: 100%;
+}
+
+.new .list .card .text .by {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    /* z-index: -1; */
+    transition: 0.3s;
+}
+
+.new .list .card .text .by button {
+    width: 49%;
+    border: none;
+    font-size: 15px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #FF0E1F;
+    color: white;
+}
+
+.new .list .card:hover .text .by {
+    top: -80%;
+}
+
+.search-container {
+    float: right;
+}
+
+input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}

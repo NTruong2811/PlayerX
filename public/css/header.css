@@ -1,0 +1,188 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+body a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: #17161A;
+    color: white;
+    justify-content: space-between;
+    height: 124px;
+}
+
+header .search {
+    line-height: 106px;
+    margin-left: 5%;
+    font-size: 29px;
+}
+
+header .search i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .search i:hover {
+    color: #FF0E1F;
+}
+
+header .nav-left ul {
+    position: absolute;
+    left: 10%;
+    display: flex;
+}
+
+header .nav-left ul li {
+    padding: 60px 0px 40px 0px;
+    list-style: none;
+    transition: 0.5s;
+    border-bottom: 5px solid #17161A;
+    text-align: center;
+    width: 100px;
+}
+
+header .nav-left ul li a {
+    padding: 60px 10% 40px 10%;
+}
+
+header .nav-left ul li a:hover {
+    color: white !important;
+}
+
+header .nav-left ul li:hover {
+    border-bottom: 5px solid #FF0E1F;
+}
+
+header .logo {
+    position: relative;
+    z-index: 10;
+}
+
+header .logo #bg {
+    margin-top: -5%;
+    margin-left: -6%;
+    position: relative;
+    width: 110%;
+}
+
+header .logo #lg {
+    position: absolute;
+    left: 31%;
+    top: 19%;
+}
+
+header .nav-right ul {
+    position: absolute;
+    right: 12%;
+    display: flex;
+}
+
+header .nav-right ul li {
+    padding: 60px 0px 40px 0px;
+    list-style: none;
+    transition: 0.5s;
+    border-bottom: 5px solid #17161A;
+    text-align: center;
+    width: 100px;
+}
+
+header .nav-right ul li a {
+    padding: 60px 10% 40px 10%;
+}
+
+header .nav-right ul li:hover {
+    border-bottom: 5px solid #FF0E1F;
+}
+
+header .user {
+    margin-top: 15px;
+    margin-right: 5%;
+}
+
+.dropdown {
+    position: relative;
+    margin-right: -150px;
+    padding-right: -10%;
+    display: inline-block;
+}
+
+.avt_name {
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+}
+
+.dropdown img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 2%;
+    margin-top: 56px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+header .user .login-regiter {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+}
+
+header .user .login-regiter span a{
+    transition: 0.3s;
+}
+header .user .login-regiter span a:hover {
+    color: #FF0E1F;
+}
+.banner{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+.banner #bg{
+    width: 100%;
+}
+.banner .lg{
+    position: absolute;
+    /* width: 13%; */
+    left: 45%;
+    /* top: 30%; */
+    /* margin: auto; */
+}

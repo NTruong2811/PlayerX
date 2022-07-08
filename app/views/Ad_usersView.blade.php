@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <!-- style file -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>/public/css/header.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/public/css/ad_users.css">
+    <title>USER</title>
+</head>
+
+<body>
+    <!-- header -->
+    <?php
+    require_once "public/template/header.php";
+    ?>
+    <!-- header end -->
+    <main>
+        <div class="title">
+            <div class="h2">
+                <h2>ADMIN</h2>
+            </div>
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <a href="<?= BASE_URL ?>admin">
+                            <li>Dashboard</li>
+                        </a>
+                        <a id="botline" href="<?= BASE_URL ?>admin/users">
+                            <li>USERS</li>
+                        </a>
+                        <a href="<?= BASE_URL ?>admin/categories">
+                            <li>CATEGORIES</li>
+                        </a>
+                        <a href="<?= BASE_URL ?>admin/products">
+                            <li>PRODUCT</li>
+                        </a>
+                        <a href="<?= BASE_URL ?>admin/orders">
+                            <li>ODERS</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>FULL NAME</th>
+                    <th>AVATAR</th>
+                    <th>ROLE</th>
+                    <th>AGE</th>
+                    <th style="width: 15%;">EMAIL</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+
+            <tbody style="font-family: sans-serif;">
+                <div id="list">
+                    <?php
+                    if (count($all_users) > 0) {
+                        foreach ($all_users as $row) {
+                    ?>
+                            <tr id="row_<?= $row->user_id ?>">
+                                <td><?= $row->full_name ?></td>
+                                <td><img id="avt_<?= $row->user_id ?>" src="<?= BASE_URL ?>public/upload/img/avatar/<?= $row->avt ?>" alt=""></td>
+                                <td><?php
+                                if($row->role==0){
+                                    echo "Admin";
+                                }else{
+                                    echo "user";
+                                }
+                                ?></td>
+                                <td><?= $row->age ?></td>
+                                <td><?= $row->email ?></td>
+                                <td><a href="users/update/<?= $row->user_id ?>"><i class="fas fa-pen-square"></i></a></td>
+                                <td> <a onclick="return confirm('bạn có chắc muốn xóa ko?')" href="users/delete/<?= $row->user_id ?>"><i class="fas fa-trash"></i></a></td>
+                            </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
